@@ -7,7 +7,7 @@
     <script>
         demo function(){
             Visualforce.remoting.Manager.invokeAction(
-                `{!RemoteAction.mainController.demo}`,
+                `{!$RemoteAction.mainController.demo}`,
                 `Test string`,
                 (result, event) => {
                     console.log(result);
