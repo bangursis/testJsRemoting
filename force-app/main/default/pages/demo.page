@@ -1,6 +1,19 @@
 <apex:page controller="mainController">
-    <!-- Begin Default Content REMOVE THIS -->
     <h1>Congratulations</h1>
     This is your new Page
-    <!-- End Default Content REMOVE THIS -->
+
+    <button onclick="demo()">The Button</button>
+
+    <script>
+        demo function(){
+            Visualforce.remoting.Manager.invokeAction(
+                `{!RemoteAction.mainController.demo}`,
+                `Test string`,
+                (result, event) => {
+                    console.log(result);
+                    console.log(event)
+                }
+            )
+        }
+    </script>
 </apex:page>
