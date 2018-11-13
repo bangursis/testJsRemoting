@@ -5,7 +5,7 @@
     <button onclick="demo()">The Button</button>
 
     <script>
-        demo function(){
+        function demo(){
             Visualforce.remoting.Manager.invokeAction(
                 `{!$RemoteAction.mainController.demo}`,
                 `Test string`,
