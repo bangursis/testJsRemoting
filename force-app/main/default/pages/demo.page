@@ -9,8 +9,8 @@
 
     <script>
         function demo1(){
-           mainController.demo( 
-                `Test string`,
+           mainController.demo1( 
+                `Test `, 'string'
                 (result, event) => {
                     console.log(result);
                     console.log(event)
