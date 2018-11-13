@@ -2,9 +2,21 @@
     <h1>Congratulations</h1>
     This is your new Page
 
-    <button onclick="demo()">The Button</button>
+    <br/>
+    <button onclick="demo()">Remoting using Visualforce.remoting</button>
+    <br/>
+    <button onclick="demo1()">Remoting using simple call</button>
 
     <script>
+        function demo1(){
+           mainController.demo( 
+                `Test string`,
+                (result, event) => {
+                    console.log(result);
+                    console.log(event)
+                }
+            )
+        }
         function demo(){
             Visualforce.remoting.Manager.invokeAction(
                 `{!$RemoteAction.mainController.demo}`,
