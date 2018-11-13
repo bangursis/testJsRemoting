@@ -1,5 +1,7 @@
 public with sharing class mainController {
-    public mainController() {
 
+    @RemoteAction
+    public static void demo(String toPrint){
+        System.debug(toPrint);
     }
 }
