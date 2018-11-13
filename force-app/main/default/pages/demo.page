@@ -9,18 +9,19 @@
 
     <script>
         function demo1(){
-           mainController.demo1( 
-                `Test `, 'string'
+           mainController.demo( 
+                `Test string`,
                 (result, event) => {
                     console.log(result);
                     console.log(event)
                 }
             )
         }
+
         function demo(){
             Visualforce.remoting.Manager.invokeAction(
-                `{!$RemoteAction.mainController.demo}`,
-                `Test string`,
+                `{!$RemoteAction.mainController.demo1}`,
+                `Test`, `string`,
                 (result, event) => {
                     console.log(result);
                     console.log(event)
